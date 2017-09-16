@@ -1,8 +1,8 @@
 # Basic
-title: joseph zhang
-subtitle: A blog-orientation theme for Jekyll
+title: Joseph Zhang
+subtitle: 不喧哗，自有声
 welcome_message: <a href="https://github.com/onevcat/vno-jekyll" target="_blank">Download the theme</a>
-description: Vno Jekyll is a port of my Ghost theme vno.
+description: 嗨，我是张钦，刚毕业于华东师范大学地理信息系统专业，目前在上海一家Fintech公司，从事Java开发，作为一只编程小白，还有很长路的要走！
 creator: <a href="http://onev.cat">@onevcat</a>
 
 url: "http://vno.onevcat.com"
@@ -37,11 +37,10 @@ comment:
     
 # Social
 social:
-    weibo: onevcat
-    github: onevcat
-    twitter: onevcat
-    gplus: 107108267983477358170
-    mail: qzhang_ecnu@163.com
+    微博: https://weibo.com/2776266055/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1
+    github: ''
+    twitter: ''
+    邮箱: qzhang_ecnu@163.com
 
 # Google Analytics
 ga:
