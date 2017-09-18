@@ -12,8 +12,25 @@ tags: 他山之石
 但趁着记忆犹新之时，我想在开篇博客来记述一下这个博客是如何得到的。
 
 该博客主要使用了gitHub和Jekyll主题，其创建主要分为一下几个步骤：
-  
+
+#创建Repository仓库
+
 1、创建一个gitHub帐号，并在gitHub上新建用来存放博客的仓库。
    
 ![github建库](http://i1262.photobucket.com/albums/ii603/Joseph_Zhang/gitHub_zpsxiud0cnc.png)
-    
+
+2、给Repository设置主题：点击“Setting”可以进入设置页面，然后下拉找到“Choose a theme”给仓库选择一个主题，确定主题之后，点击“Commit changes”进行提交，此时便可以在浏览器中输入www.仓库名.github.io 看到属于自己的网站了。
+
+3、由于gitHub上提供的主题太单一，我们可以自己搭建，但需要一定的技术。如果像我一样是一只编程小白，而又想拥有一个样式还不错的博客网站，可以到gitHub上fork大牛们的开源项目主题。这里我采用的是 Vno - Jekyll主题，其gitHub地址为https://github.com/onevcat/OneV-s-Den 。
+
+#为自己的博客选购域名
+
+1、域名有免费的，也有收费的，为了自己的网站能够稳定运行，建议选购一个靠谱的域名供应商，比如国内的腾讯云和阿里云。本人的域名是在腾讯云购买的，以com.cn结尾，域名选购好之后需要进行域名解析，并将其绑定到我们的gitHub仓库，以腾讯云为例。
+
+![域名解析](http://i1262.photobucket.com/albums/ii603/Joseph_Zhang/DNS_zpse7syf3sl.png)
+    
+2、上一步完成的只是一个单向的域名解析，将自己的域名指向gitHub服务器，由于多个人的域名都指向gitHub服务器，那么gitHub服务器怎么知道每个域名对应的是哪一个项目呢，此时嗨需要在刚新建的gitHub仓库里新建CNAME配置文件，引导gitHub找到我们的网站，
+
+![CNAME配置文件](http://i1262.photobucket.com/albums/ii603/Joseph_Zhang/CNAME_zpse7akol0f.png)
+
+完成以上设置，便可以在浏览器输入自己的域名，访问自己的博客网站啦！
