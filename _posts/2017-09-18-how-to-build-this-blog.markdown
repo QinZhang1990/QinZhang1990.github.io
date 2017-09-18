@@ -14,5 +14,6 @@ tags: 他山之石
    该博客主要使用了gitHub和Jekyll主题，其创建主要分为一下几个步骤：
    
     1、创建一个gitHub帐号，并在gitHub上新建用来存放博客的仓库
+    
     ![github建库](http://i1262.photobucket.com/albums/ii603/Joseph_Zhang/gitHub_zpsxiud0cnc.png)
     
