@@ -12,7 +12,7 @@ tags: 他山之石
 
 1、创建一个gitHub帐号，并在gitHub上新建用来存放博客内容的仓库。
    
-![github建库](http://i1262.photobucket.com/albums/ii603/Joseph_Zhang/gitHub_zpsxiud0cnc.png)
+![](/assets/images/2017/makeNewRepository.png)
 
 2、给Repository设置主题：点击“Setting”可以进入设置页面，然后下拉找到“Choose a theme”给仓库选择一个主题，确定主题之后，点击“Commit changes”进行提交，此时便可以在浏览器中输入www.仓库名.github.io 看到属于自己的网站了。
 
@@ -22,10 +22,10 @@ tags: 他山之石
 
 1、域名有免费的，也有收费的，为了自己的网站能够稳定运行，建议选购一个靠谱的域名供应商，比如国内的腾讯云和阿里云。本人的域名是在腾讯云购买的，以com.cn结尾，域名选购好之后需要进行域名解析，并将其绑定到我们的gitHub仓库，以腾讯云为例，如下图：
 
-![域名解析](http://i1262.photobucket.com/albums/ii603/Joseph_Zhang/DNS_zpse7syf3sl.png)
+![](/assets/images/2017/DNS.png)
     
 2、上一步完成的只是一个单向的域名解析，将自己的域名指向gitHub服务器，由于多个人的域名都指向gitHub服务器，那么gitHub服务器怎么知道每个域名对应的是哪一个项目呢，此时还需要在gitHub仓库里新建CNAME配置文件，引导gitHub找到我们的网站，
 
-![CNAME配置文件](http://i1262.photobucket.com/albums/ii603/Joseph_Zhang/CNAME_zpse7akol0f.png)
+![](/assets/images/2017/CNAME.png)
 
 完成以上设置，便可以在浏览器输入自己的域名，访问自己的博客网站啦！
