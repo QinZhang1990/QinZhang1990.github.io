@@ -14,7 +14,7 @@ tags: 他山之石
 
 ![](/assets/images/2017/mysql_deploy/msq1.PNG)
   
-  ### 2 配置
+### 2 配置
   
   解压后的安装包，选择合适的位置存放，如D盘，文件夹名为（mysql-5.7.18）
   
@@ -56,9 +56,9 @@ long_query_time=10
 log-error="qzhang-PC.err"
 ```
 
-（3）启动DOS窗口进行初始化（WIN+R；以管理员的形式运行），Dos界面打开之后，进入到bin目录下：键入mysqld –initialize
+（3）启动DOS窗口进行初始化（WIN+R；以管理员的形式运行），Dos界面打开之后，进入到bin目录下：键入`mysqld –initialize`
 
-	![](/assets/images/2017/mysql_deploy/msq3.PNG)
+![](/assets/images/2017/mysql_deploy/msq3.PNG)
 
 初始化之后，mysql目录下便会产生data目录，并且会生成一个root用户和用于登录数据库的随机密码。
 
@@ -66,30 +66,41 @@ log-error="qzhang-PC.err"
 
 随机密码的查看有两种方式：
 
-1）打开data目录下的.err文件，找到“[Note] A temporary password is generated for root@localhost: M*-x>jLj1Lw9”这样一句话, root@localhost:之后即为密码；
+1）打开data目录下的.err文件，找到`[Note] A temporary password is generated for root@localhost: M*-x>jLj1Lw9`这样一句话, root@localhost:之后即为密码；
 
 2）“我的电脑”——管理——“事件查看器”——Windows日志——应用程序
 
 ![](/assets/images/2017/mysql_deploy/msq5.PNG)
 
-（4）将mysql注册到Windows系统服务，此处同样需要在bin目录下（否则下一步启动mysql服务时，会提示“报发生系统错误2”；
-http://blog.csdn.net/zhouyufengqingyang/article/details/46291057）， 打开dos界面，然后键入“mysqld install mysql”，若删除服务则“mysqld remove mysql”（mysql为服务的名字，可以任意命名）。
+（4）将mysql注册到Windows系统服务，此处同样需要在bin目录下（否则下一步启动mysql服务时，会提示`报发生系统错误2`；
+http://blog.csdn.net/zhouyufengqingyang/article/details/46291057）， 打开dos界面，然后键入`mysqld install mysql`，若删除服务则`mysqld remove mysql`（mysql为服务的名字，可以任意命名）。
 
-（5）启动和关闭mysql服务，该项操作需要在bin目录下，操作dos界面，在dos中键入“net start mysql”；关闭服务即“net stop mysql”。
+（5）启动和关闭mysql服务，该项操作需要在bin目录下，操作dos界面，在dos中键入`net start mysql`；关闭服务即`net stop mysql`。
 
 ![](/assets/images/2017/mysql_deploy/msq6.PNG)
  
-（6）登录MySQL，在bin目录下通过dos界面登录MySQL，键入“mysql –u root –p”；
+（6）登录MySQL，在bin目录下通过dos界面登录MySQL，键入`mysql –u root –p`；
 
 ![](/assets/images/2017/mysql_deploy/msq7.PNG)
 
-（7）更改初始密码，登录之后，在dos界面“mysql>”之后键入 “set password=‘123456’”；然后通过“flush privileges”进行权限更新
+（7）更改初始密码，登录之后，在dos界面“mysql>”之后键入 `set password=‘123456’`；然后通过`flush privileges`进行权限更新
 
 ![](/assets/images/2017/mysql_deploy/msq8.PNG)
 
-（8）验证登录；重新打开dos界面（不需要在bin目录下），键入“mysql –u root -p”
+（8）验证登录；重新打开dos界面（不需要在bin目录下），键入`mysql –u root -p`
 
 ![](/assets/images/2017/mysql_deploy/msq9.PNG)
+
+
+### 参考文章：
+1 http://www.cnblogs.com/wangdy/p/6972028.html
+
+2 http://blog.csdn.net/yanzhibo/article/details/71310504
+
+3 http://blog.csdn.net/xybelieve1990/article/details/52202650
+
+4 http://blog.csdn.net/yanzhibo/article/details/71310504
+
 
 
 
