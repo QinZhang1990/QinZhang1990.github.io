@@ -169,6 +169,7 @@ public class BaseDao {
 (3) 创建业务Dao层，并继承BaseDao
 
 ```swift
+/*注意此处需要导入包*/
 public class BookDao extends BaseDao {
 	//查询所有书籍
 	public List<Book> getAll(PageUtil p){
