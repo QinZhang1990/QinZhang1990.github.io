@@ -219,6 +219,6 @@ private void list(HttpServletRequest req, HttpServletResponse resp) throws Servl
 		req.getRequestDispatcher("list.jsp").forward(req, resp);
 	}
 ```
-注：参考了51cto学院邹波老师的课程![Java Web详解之JSP/Servlet视频课程]( http://edu.51cto.com/center/course/index/search?q=皱波)
+注：参考了51cto学院邹波老师的课程![Java Web详解之JSP/Servlet视频课程]( http://edu.51cto.com/course/5023.html)
 
 
