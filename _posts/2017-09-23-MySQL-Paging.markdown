@@ -13,6 +13,7 @@ tags: 他山之石
 ## 2 MySQL分页原理
 
 (1) 数据库分页需要确定以下信息：
+
 ` pageSize `——每页显示的记录数据；
 ` totalCount `——总共的记录数
 ` totalPage `——总共的页数，总页数需要向上取整，其计算公式如下：
@@ -20,6 +21,7 @@ totalPage = totalCount%pageSize==0? totalCount/pageSize:(totalCount/pageSize)+1;
 ` currentPage `——当前页数
 
 (2) mysql数据库分页采用limit关键字
+
 Select * from tableName limit m，n；
 其中`m`是指记录开始的index，从0开始，表示第一条记录
 `n`是指从第m+1条开始，取n条。
