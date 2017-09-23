@@ -31,7 +31,7 @@ paginate_path: "page/:num/"
 
 # Comment
 comment:
-    disqus: joseph_zhang
+    disqus: qin zhang
     # duoshuo:
 # Social
 social:
