@@ -40,6 +40,7 @@ public class MainApp {
 `The toString method for class Object returns a string consisting of the name of the class of which the　object is an instance, the at-sign character ＇@＇, and the unsigned hexadecimal representation of the　hash code of the object. In other words, this method returns a string equal to the value of:`
 
 `getClass().getName() + '@' + Integer.toHexString(hashCode())`
+
 看完就明白了，上边的结果，即类名@hashCode，往往这样的结果并没有实际的意义，所以，我们需要重写toString()方法。
 
 ### 3 重写toString()方法
