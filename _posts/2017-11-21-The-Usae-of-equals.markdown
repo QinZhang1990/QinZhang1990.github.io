@@ -51,7 +51,7 @@ public class MainApp {
 
 ![](/assets/images/2017/reference_compare.PNG)
 
-从图中可以看出，s1和s2作为对象的引用，分别指向不同的地址，所以永远都会相等。而要比较内容是否相等，应该采用equals
+从图中可以看出，s1和s2作为对象的引用，分别指向不同的地址，所以永远都不会相等。而要比较内容是否相等，应该采用equals
 方法。
 
 ### 2 equals(Object obj)方法的使用
@@ -68,7 +68,7 @@ public class MainApp {
 ```
 返回的结果依然是`false`，这又是为何呢？
 
-查阅JDK API文档中java.lang.Object中对equals方法的定义，能找到如下一段描述：
+查阅JDK API文档，java.lang.Object中对equals方法的定义，能找到如下一段描述：
 
 `The equals method for class Object implements the most discriminating possible equivalence relation on objects; that is, for any non-null reference values x and y, this method returns true if and only if x and y refer to the same object (x == y has the value true).`
 
