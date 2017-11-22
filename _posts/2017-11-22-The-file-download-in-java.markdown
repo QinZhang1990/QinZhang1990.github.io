@@ -8,7 +8,9 @@ tags: 他山之石
 ### 1 单个文件下载
 
 （1）通过数据库查询或是现有参数集合中获取待下载文件的路径filePath
+
 （2）构建文件对象
+
 ```swift
 File file = new File(filePath);
 ```
@@ -26,7 +28,7 @@ FileInputStream stream = new FileInputStream(file);
 	bytes[] fileBytes = out.toByteArray();
 ```
 
-（4）设置请求响应Response的头部，并将字节内容写入到Response的输出内容中，其中最关键的两个设置，即如下代码中的`[1]``
+（4）设置请求响应Response的头部，并将字节内容写入到Response的输出内容中，其中最关键的两个设置，即如下代码中的`[1]`
 和`[2]`，[1]告诉浏览器以附件attachment形式下载，[2]告诉浏览器下载文件的类型，除了[2]中的形式，也可以设为二进制的形式。
 ```swift
 public static String outputOneFile(HttpServletResponse resp, byte[] fileBytes, String fileName){
@@ -137,10 +139,9 @@ $.ajax({
 
 1）因为response原因，一般请求浏览器是会处理服务器输出的response，例如生成png、文件下载等，然而ajax请求只是个
 “字符型”的请求，即请求的内容是以文本类型存放的。文件的下载是以二进制形式进行的，虽然可以读取到返回的response，
-但只是读取而已，是无法执行的，说白点就是js无法调用到浏览器的下载处理机制和程序。
-![查看原文](http://blog.csdn.net/fan510988896/article/details/71520390)
+但只是读取而已，是无法执行的，说白点就是js无法调用到浏览器的下载处理机制和程序。[查看原文](http://blog.csdn.net/fan510988896/article/details/71520390)
 
 2）实验：ajax方式下载文件时无法触发浏览器打开保存文件对话框，也就无法将下载的文件保存到硬盘上！
 原因：ajax方式请求的数据只能存放在javascipt内存空间，可以通过javascript访问，但是无法保存到硬盘，因为javascript
-不能直接和硬盘交互，否则将是一个安全问题。![查看原文](http://www.cnblogs.com/nuccch/p/7151228.html)
+不能直接和硬盘交互，否则将是一个安全问题。[查看原文](http://www.cnblogs.com/nuccch/p/7151228.html)
 
