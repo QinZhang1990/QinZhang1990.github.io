@@ -14,8 +14,8 @@ tags: 他山之石
 
 ### 2 为什么要用CDATA
 
-ibatis的sqlmapping.xml文件本质上是一种XML格式的文本，XML解析器一般会处理XML文档中的所有文本。当XML元素，如<select>、
-<message>等等，被解析时，XML元素内部的文本也会被解析，当元素中嵌套元素时，内层元素也会被解析，如下：
+ibatis的sqlmapping.xml文件本质上是一种XML格式的文本，XML解析器一般会处理XML文档中的所有文本。当XML元素，如`<select>`、
+`<message>`等等，被解析时，XML元素内部的文本也会被解析，当元素中嵌套元素时，内层元素也会被解析，如下：
 
 `<position><altitude>31.45</altitude><longitude>121.33</longitude></position> `
 
@@ -27,15 +27,15 @@ ibatis的sqlmapping.xml文件本质上是一种XML格式的文本，XML解析器
     <longitude>121.33</longitude>
 </position>
 ```
-所以，对于<、>、&等符号便不能直接存入XML，尤其是“<”，会被当做新的元素标签的开始，这样解析时便会出现问题。
+所以，对于`<`、`>`、`&`等符号便不能直接存入XML，尤其是“<”，会被当做新的元素标签的开始，这样解析时便会出现问题。
 
 ### 3 如何解决
 
 方法一：进行转译，将其转换成XML中预定义的实体，XML中预定义好了以下实体
 
 |-----|:----:|-----:|
-| &lt; | < | 小于号 |
-| &gt; | > | 大于号 |
+| &lt; | `<` | 小于号 |
+| &gt; | `>`| 大于号 |
 | &amp;| & | 和 |
 | &apos; | ' | 单引号 |
 | &quot | " | 双引号 |
