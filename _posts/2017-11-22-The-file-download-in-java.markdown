@@ -26,8 +26,8 @@ FileInputStream stream = new FileInputStream(file);
 	bytes[] fileBytes = out.toByteArray();
 ```
 
-（4）设置请求响应Response的头部，并将字节内容写入到Response的输出内容中，其中最关键的两个设置，即如下代码中的[1]
-和[2]，[1]告诉浏览器以附件attachment形式下载，[2]告诉浏览器下载文件的类型，除了[2]中的形式，也可以设为二进制的形式。
+（4）设置请求响应Response的头部，并将字节内容写入到Response的输出内容中，其中最关键的两个设置，即如下代码中的`[1]``
+和`[2]`，[1]告诉浏览器以附件attachment形式下载，[2]告诉浏览器下载文件的类型，除了[2]中的形式，也可以设为二进制的形式。
 ```swift
 public static String outputOneFile(HttpServletResponse resp, byte[] fileBytes, String fileName){
 		resp.setHeader(“Content-Transfer-Encoding”, “binary”);
