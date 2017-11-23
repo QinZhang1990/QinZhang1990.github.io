@@ -53,6 +53,33 @@ public static void main(String[] args){
 		System.out.println(ocount);
 	}
 ```
+或者是利用indexOf()方法，如下：
+```swift
+public static void main(String[] args){
+		//分别计算一个字符串中，大写的字母，小写字母和不是字母的字符的个数
+		String s = "AAaABbbbEEE$@*8@%EeeOOfjFWFJLL:WW";
+		int lcount=0;
+		int ucount=0;
+		int ocount=0;
+		//定义小写的字母表字符串
+		String lAlphabet = "abcdefghijklmnoprstuvwxyz";
+		String uAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		//开始计算每一类字符的个数
+		for(int i=0,len=s.length();i<len;i++){
+			char c = s.charAt(i);
+			if(lAlphabet.indexOf(c)!=-1){
+				lcount++;
+			}else if(uAlphabet.indexOf(c)!=-1){
+				ucount++;
+			}else{
+				ocount++;
+			}
+		}
+		System.out.println(lcount);
+		System.out.println(ucount);
+		System.out.println(ocount);
+	}
+```
 
 
 
