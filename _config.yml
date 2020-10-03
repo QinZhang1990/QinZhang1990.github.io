@@ -21,7 +21,6 @@ blog_button:
 
 nav:
     - {title: 简历, description: 我的简历, url: ''}
-    - {title: 关于, description: 了解更多关于我, url: ''}
     - {title: 订阅, description: 邮件订阅本站, url: ''}
 
 # Pagination
@@ -37,7 +36,6 @@ comment:
 social:
     weibo: https://weibo.com/2776266055/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1
     github: ''
-    gplus: ''
     mail: qzhang_ecnu@163.com
 
 # Google Analytics
