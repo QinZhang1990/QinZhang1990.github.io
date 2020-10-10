@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Java中toString()方法的使用"
+title: "toString()方法的使用"
 date: 2017-11-20 20:30:00.000000000 +00:00
 tags: 他山之石
 ---

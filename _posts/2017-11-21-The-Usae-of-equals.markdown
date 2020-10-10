@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Java中equals方法的使用"
+title: "equals方法的使用"
 date: 2017-11-21 22:00:00.000000000 +00:00
 tags: 他山之石
 ---

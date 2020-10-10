@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "java基础之反射"
+title: "反射"
 date: 2018-09-15 00:00:00.000000000 +00:00
 tags: java基础
 ---
