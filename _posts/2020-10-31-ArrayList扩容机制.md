@@ -104,12 +104,12 @@ ArrayList通过add方法向集合中添加元素，其源码实现如下：
 **ensureCapacityInternal()**方法，根据当前size进行判断是否需要扩容，判断逻辑如下源码。当ArrayList第一次添加元素时，elementData == DEFAULTCAPACITY_EMPTY_ELEMENTDATA为true，此时minCapacity=DEFAULT_CAPACITY，接着继续调用ensureExplicitCapacity()方法进行判断
 
 ```java
-	private void ensureCapacityInternal(int minCapacity) {
-        if (elementData == DEFAULTCAPACITY_EMPTY_ELEMENTDATA) {
-            minCapacity = Math.max(DEFAULT_CAPACITY, minCapacity);
-        }
-        ensureExplicitCapacity(minCapacity);
+private void ensureCapacityInternal(int minCapacity) {
+    if (elementData == DEFAULTCAPACITY_EMPTY_ELEMENTDATA) {
+        minCapacity = Math.max(DEFAULT_CAPACITY, minCapacity);
     }
+    ensureExplicitCapacity(minCapacity);
+}
 ```
 
 首次添加元素，elementData为空数组实例DEFAULTCAPACITY_EMPTY_ELEMENTDATA，即length为0，接着进入grow()方法。if中大于0则表明当前添加元素之后，size会超过当前数组的length，需要扩容了；
@@ -159,12 +159,12 @@ ArrayList通过add方法向集合中添加元素，其源码实现如下：
 此处有一个疑问，源码中定义的ArrayList的最大容量是``Integer.MAX_VALUE - 8``，之所以**减8**，源码中官方给的注释是``“Some VMs reserve some header words in an array”``，即部分虚拟机需要在数组中保留一些头部信息，但是为什么当ArrayList的size超过了Integer.MAX_VALUE - 8，还能继续扩容到Integer.MAX_VALUE ？
 
 ```java
-	private static int hugeCapacity(int minCapacity) {
-        if (minCapacity < 0) // overflow
-            throw new OutOfMemoryError();
-        return (minCapacity > MAX_ARRAY_SIZE) ?
-            Integer.MAX_VALUE :
-            MAX_ARRAY_SIZE;
-    }
+private static int hugeCapacity(int minCapacity) {
+    if (minCapacity < 0) // overflow
+        throw new OutOfMemoryError();
+    return (minCapacity > MAX_ARRAY_SIZE) ?
+        Integer.MAX_VALUE :
+    MAX_ARRAY_SIZE;
+}
 ```
 
